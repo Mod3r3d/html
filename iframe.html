@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.img{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+		body{
+			text-align: center;
+		}
+
+		body h2{
+			background-color: antiquewhite;
+			border-radius: 12px;
+			display: inline-block;
+			padding: 10px;
+			border-left: 5px solid #00bcd4;
+			color: navy;
+		}
+
+		button{
+			background-color: mediumaquamarine;
+			color: white;
+			width:85px;
+			height:40px;
+			border-radius: 5px;
+			border: none;
+		}
+
+		button:hover{
+			background-color: lightseagreen;
+			cursor: pointer;
+			}
+	</style>
+</head>
+<body>
+	<span><h2>Trang chủ</h2></span>
+	<p style="color:navy; font-style: italic; font-size: 16px ; text-align: left;" >Chào mừng bạn đến với trang web giới thiệu về bản thân của tôi, hy vọng sau khi xem qua trang web này bạn có thể hiểu thêm chút ít về bản thân tôi. </p>
+	<div class="img">
+		<img src="images\iframe.jpg" width="600px" height="400px">
+	</div>
+	<p>Các biến trong mảng: 1, 2, 3, 4, 5</p>
+	<script>
+		function tong(){
+			let array = [1, 2, 3, 4, 10];
+			let sum = 0;
+			for(let i=0; i<5 ; i++){
+				sum += array[i]
+			}
+			return sum;
+		}
+	</script>
+	<button onclick="document.getElementById('demo').innerHTML = tong()">Tính tổng</button>
+	<p id="demo"></p>
+</body>
+</html>
