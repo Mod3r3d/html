@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website giới thiệu bản thân</title>
+	<meta charset="UTF-8">
+	<meta keyword="thông tin cá nhân, giới thiệu bản thân" content="Trang web giới thiệu về bản thân">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style type="text/css">
+	*{
+		box-sizing: border-box;
+	}
+
+	.container{
+		width: 80%;
+		max-width: 2200px;
+		margin: 30px auto;
+		background-color: white;
+		border-radius: 12px;
+		box-shadow: 4px 6px 15px rgba(0,0,0,0.15);
+		overflow: hidden;
+	}
+
+	header{
+		font-family: 'Courier New', Courier, monospace;
+		background-image: url('images/nen.jpg');
+		background-size: cover;
+		padding: 15px;
+		text-align: center;
+		color: white;
+	}
+
+	header img{
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		border: 2px solid white;
+	}
+
+	header p{
+		font-size: 16px;
+		opacity: 0.9;
+	}
+
+	section{
+		overflow: hidden;
+	}
+
+	section h2{
+		font-size: 20px;
+		margin-bottom: 15px;
+		color: #00796b;
+		border-left: 5px solid #00bcd4;
+		padding-left: 10px;
+	}
+
+	nav{
+		float: left;
+		width: 15%;
+		height: 750px;
+		background: linear-gradient(135deg, aqua, deepskyblue);
+		padding: 30px;
+	}
+
+	article{
+		float: left;
+		width: 85%;
+		height: 750px;
+		background-color: white;
+	}
+
+	footer{
+		background-color:MediumSeaGreen;
+		color: whitesmoke;
+		padding: 1px;
+	}
+
+	#menu-toggle{
+		display: none;
+	}
+
+	.menu_btn{
+		display: inline-block;
+		background: white;
+		padding: 10px;
+		border-radius: 5px;
+		cursor: pointer;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	}
+
+	.menu_btn span{
+		display: block;
+		width: 25px;
+		height: 3px;
+		margin: 5px;
+		background: #00796b;
+		border-radius: 3px;
+	}
+	
+	.menu{
+		margin-top: -10px;
+		margin-left: 35px;
+		display: none;
+		background: dodgerblue;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+	.menu a{
+		display: block;
+		padding: 12px;
+		color: white;
+		text-decoration: none;
+		transition: 0.3s;
+	}
+
+	.menu a:hover{
+		background: #00796b;
+	}
+
+	#menu-toggle:checked + .menu_btn + .menu{
+		display: block;
+	}
+
+</style>
+<body>
+	<div class="container">
+		<header>
+			<img src="images/kk.jpg" alt="'Ảnh cá nhân" >
+			<h2>WEBSITE GIỚI THIỆU BẢN THÂN CỦA NGUYỄN QUANG HUY</h2>
+			<p>Nguyễn Quang Huy | MSV: 687650</p>
+		</header>
+
+		<section>
+			<nav>
+				<input type="checkbox" id="menu-toggle">
+
+				<label for="menu-toggle" class="menu_btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
+
+				<div class ="menu">
+					<a href="iframe.html" target="content">&#127968; Trang chủ</a>
+					<a href="quequan.html" target="content">&#128507; Quê quán</a>
+					<a href="truonghoc.html" target="content">&#9962; Trường học</a>
+					<a href="sothich.html" target="content">&#11088; Sở thích</a>
+				</div>
+			</nav>
+
+			<article>
+				<iframe src="iframe.html" width="100%" height="100%" name="content">
+					
+				</iframe>
+			</article>
+		</section>
+
+		<footer style="text-align: center;">
+			<p>Thông tin liên hệ: Nguyễn Quang Huy - MSV:687650</p>
+		</footer>
+	</div>
+</body>
+</html>
