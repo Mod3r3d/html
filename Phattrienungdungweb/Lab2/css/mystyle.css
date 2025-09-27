@@ -1,0 +1,25 @@
+*{ box-sizing: border-box;}
+
+header{
+    text-align: center;
+}
+
+body{
+    font-size: 20px;
+}
+
+nav{
+    flex: 1;
+    margin: auto;
+
+}
+
+article{
+    flex: 4;
+    margin: 20px;
+}
+
+section{
+    display: flex;
+}
+

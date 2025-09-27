@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        *{box-sizing: border-box;}
+
+        body{
+            margin: auto;
+            text-align: center;
+            width: 600px;
+            border-radius: 10px;
+            height: 300px;
+            padding: 50px;
+            box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        button{
+            height: 30px;
+            width: 70px;
+            border: none;
+            color: white;
+            background-color: mediumaquamarine;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: rgb(55, 155, 122);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tính tổng</h1>
+    <label>Nhập n = </label>
+    <input type="text" id="number" placeholder="Nhập vào n...">
+    <br>
+    <br>
+    <button onclick="tinh()">Tính</button>
+    <br>
+    <p id="ketqua"></p>
+    <script>
+        function tinh(){
+            document.getElementById("ketqua").innerHTML="";
+            let n = parseInt(document.getElementById("number").value);
+            let tong=0;
+            if(isNaN(n) || n < 0){
+                alert("Vui lòng nhập vào 1 số nguyên dương!");
+                return
+            }else{
+                for(let i =0; i<=n;i++){
+                    tong+=i*i;
+                }
+            } 
+            document.getElementById("ketqua").innerHTML="Tổng = " + tong;
+        }  
+    </script>
+</body>
+</html>

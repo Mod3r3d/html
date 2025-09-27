@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        *{box-sizing: border-box;}
+
+        body{
+            margin: auto;
+            text-align: center;
+            width: 600px;
+            border-radius: 10px;
+            height: 450px;
+            padding: 50px;
+            box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        button{
+            margin-top: 30px;
+            height: 30px;
+            width: 70px;
+            border: none;
+            color: white;
+            background-color: mediumaquamarine;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: rgb(55, 155, 122);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        p{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>In dãy số </h1>
+    <label>Nhập n= </label>
+    <input type="number" id="number">
+    <br>
+    <button onclick="xuli()">OK</button>
+    <p id="demo"></p>
+    <script>
+        function xuli(){
+            let text="";
+            let n = parseInt(document.getElementById("number").value);
+            document.getElementById("demo").innerHTML="";
+
+            if(n>9){
+                alert("Vui lòng nhập n <= 9!");
+            }else{
+                for(let i =0;i<=n;i++){
+                    for(let j=0;j<=i;j++){
+                        text +=j+" ";
+                    }
+                    text += "<br>";
+                }
+                document.getElementById("demo").innerHTML=text;
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>
